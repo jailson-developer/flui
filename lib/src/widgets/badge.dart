@@ -104,7 +104,6 @@ class FLBadgeState extends State<FLBadge> {
     List<Widget> children =
         widget.hidden ? [widget.child] : [widget.child, badge];
 
-    return Stack(
-        alignment: alignment, overflow: Overflow.visible, children: children);
+    return Stack(alignment: alignment, clipBehavior: Clip.none, children: children);
   }
 }
